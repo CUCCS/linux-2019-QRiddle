@@ -56,7 +56,7 @@ script:
   #分别统计不同4XX状态码对应的TOP 10 URL和对应出现的总次数
   - bash shell/web.sh -e
   #给定URL输出TOP 100访问来源主机
-  - bash shell/web.sh -u
+  - bash shell/web.sh -u /pub/winvn/readme.txt
   
   
 after_script:
