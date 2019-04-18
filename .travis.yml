@@ -45,7 +45,7 @@ script:
   #任务三：用bash编写一个文本批处理脚本，对以下附件分别进行批量处理完成相应的数据统计任务
   #查看帮助信息
   - bash shell/web.sh -h
-  #统计访问来源主机TOP 100和分别对应出现的总次数
+  #统计访问来源主机TOP100和分别对应出现的总次数
   - bash shell/web.sh -a
   #统计访问来源主机TOP 100 IP和分别对应出现的总次数
   - bash shell/web.sh -b
