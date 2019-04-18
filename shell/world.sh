@@ -2,7 +2,7 @@
 
 function age()
 {
-	age=$(awk -F "\t" '{ print $6 }' ./worldcupplayerinfo.tsv)
+	age=$(awk -F "\t" '{ print $6 }' worldcupplayerinfo.tsv)
 	count=0
 	lower_20=0
 	between_20and30=0
@@ -30,7 +30,7 @@ function age()
 
 function oldAndYoung()
 {
-	age=$(awk -F "\t" '{ print $6 }' ./worldcupplayerinfo.tsv)
+	age=$(awk -F "\t" '{ print $6 }' worldcupplayerinfo.tsv)
 	count=0
 	young_age=100
 	old_age=0
@@ -45,14 +45,14 @@ function oldAndYoung()
 			fi
 		fi
 	done
-	young_name=$(awk -F '\t' '{if($6=='$young_age') {print $9}}' ./worldcupplayerinfo.tsv)
+	young_name=$(awk -F '\t' '{if($6=='$young_age') {print $9}}' worldcupplayerinfo.tsv)
 	echo "年龄最小："
 	for j in $young_name
 	do
 		echo "$j , $young_age 岁"
 	done
 
-	old_name=$(awk -F '\t' '{if($6=='$old_age') {print $9}}' ./worldcupplayerinfo.tsv)
+	old_name=$(awk -F '\t' '{if($6=='$old_age') {print $9}}' worldcupplayerinfo.tsv)
 	echo "年龄最大："
 	for k in $old_name
 	do
@@ -61,7 +61,7 @@ function oldAndYoung()
 }
 function nameLength()
 {
-	name=$(awk -F "\t" '{ print length($9) }' ./worldcupplayerinfo.tsv)
+	name=$(awk -F "\t" '{ print length($9) }' worldcupplayerinfo.tsv)
 	longest=0
 	shortest=100
 	for i in $name
@@ -76,8 +76,8 @@ function nameLength()
 			fi
 		fi
 	done
-	longest_name=$(awk -F '\t' '{if (length($9)=='$longest'){print $9}}' ./worldcupplayerinfo.tsv)
-	shortest_name=$(awk -F '\t' '{if (length($9)=='$shortest'){print $9}}' ./worldcupplayerinfo.tsv)
+	longest_name=$(awk -F '\t' '{if (length($9)=='$longest'){print $9}}' worldcupplayerinfo.tsv)
+	shortest_name=$(awk -F '\t' '{if (length($9)=='$shortest'){print $9}}' worldcupplayerinfo.tsv)
 	echo "名字最长的是 :"
 	for j in $longest_name
 	do
@@ -91,7 +91,7 @@ function nameLength()
 }
 function position()
 {
-	position=$(awk -F '\t' '{print $5}' ./worldcupplayerinfo.tsv)
+	position=$(awk -F '\t' '{print $5}' worldcupplayerinfo.tsv)
 	Goalie=0
 	Defender=0
 	Midfielder=0
