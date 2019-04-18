@@ -37,7 +37,7 @@ script:
   ##后缀
   - bash shell/image.sh -r tail h ./img
   #将png/svg图片统一转换为jpg格式图片
-  bash shell/image.sh -t ./img
+  - bash shell/image.sh -t ./img
   
   #任务二：用bash编写一个文本批处理脚本，对以下附件分别进行批量处理完成相应的数据统计任务
   - bash shell/world.sh
